@@ -33,7 +33,7 @@ func InitDb() (*gorm.DB, error) {
 	}
 	err = db.AutoMigrate(&schemas.Opening{})
 	if err != nil {
-		logger.Errorf("aqlite_automigration_error: %v", err)
+		logger.Errorf("sqlite_automigration_error: %v", err)
 		return nil, err
 	}
 	return db, nil
